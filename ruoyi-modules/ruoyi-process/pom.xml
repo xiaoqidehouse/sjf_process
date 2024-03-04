@@ -1,17 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>ruoyi</artifactId>
-        <groupId>com.ruoyi</groupId>
-        <version>3.6.3</version>
-        <relativePath>../../pom.xml</relativePath>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ruoyi</groupId>
+        <artifactId>ruoyi-modules</artifactId>
+        <version>3.6.3</version>
+    </parent>
 
-    <artifactId>ruoyi-product</artifactId>
+    <artifactId>ruoyi-process</artifactId>
     <packaging>jar</packaging>
 
-    <name>ruoyi-product</name>
+    <name>ruoyi-process</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -94,6 +93,13 @@
             <groupId>com.ruoyi</groupId>
             <artifactId>ruoyi-common-security</artifactId>
         </dependency>
+
+        <!--mybatis plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.3.2</version>
+        </dependency>
         <!-- 单元测试 -->
         <dependency>
             <groupId>junit</groupId>
@@ -101,6 +107,40 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+
+        <!--minio 图片上传-->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-kun</artifactId>
+            <version>5.2.1-SNAPSHOT</version>
+        </dependency>
+
+<!--        json转换-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>2.0.40</version>
+        </dependency>
+
+        <!-- 上传 大文件上传-->
+        <dependency>
+            <groupId>bw-springboot-starter</groupId>
+            <artifactId>spring-boot-starter-upload</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--短信依赖-->
+        <dependency>
+            <groupId>com.zhenzikj</groupId>
+            <artifactId>zhenzisms</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
